@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "PurLuft",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
