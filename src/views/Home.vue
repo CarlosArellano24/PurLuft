@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>PurLuft Network</ion-title>
+        <ion-title><h1>PurLuft Network</h1></ion-title>
       </ion-toolbar>
     </ion-header>
     
@@ -12,6 +12,19 @@
           <ion-title size="large">PurLuft Network</ion-title>
         </ion-toolbar>
       </ion-header>
+
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button auto-hide="false"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Dispositivos</ion-title>
+        <ion-buttons @click="signOut(auth)"
+        slot="primary">
+          <ion-button auto-hide="false">
+            <ion-icon :icon="logOutOutline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
 
       <ion-list>
         <ion-item>
@@ -27,14 +40,14 @@
       </ion-list>
 
       <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-        <ion-fab-button @click="() => router.push('/login')">
+        <ion-fab-button>
           <ion-icon :icon="megaphone"></ion-icon>
         </ion-fab-button>
       </ion-fab>
 
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <div id="container" v-if="auth.currentUser">
+        <strong>Bienvenido {{auth.currentUser.displayName}}</strong>
+        <p>Recibirás <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">notificaciones de seguridad</a></p>
       </div>
     </ion-content>
   </ion-page>
@@ -44,7 +57,8 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
-import { megaphone } from 'ionicons/icons';
+import { megaphone, logOutOutline } from 'ionicons/icons';
+import { auth, signOut } from '../firebase.js';
 
 export default defineComponent({
   name: 'Home',
@@ -58,7 +72,10 @@ export default defineComponent({
   setup () {
     return {
       router: useRouter(),
-      megaphone
+      megaphone,
+      logOutOutline,
+      auth,
+      signOut
     }
   }
 });

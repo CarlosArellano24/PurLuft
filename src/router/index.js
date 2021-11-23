@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
-// import { RouteRecordRaw } from 'vue-router';  //Enable this for TypeScript
+// import { RouteRecordRaw } from 'vue-router';  // Enable this for TypeScript
 import Home from '../views/Home.vue';
 import Login from '../views/Login.vue';
 
