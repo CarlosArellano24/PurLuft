@@ -1,5 +1,5 @@
 {
-	"appId": "io.ionic.starter",
+	"appId": "web.redpurificadores.app",
 	"appName": "PurLuft",
 	"webDir": "dist",
 	"bundledWebRuntime": false

@@ -30,11 +30,11 @@
         <ion-item>
           <ion-checkbox slot="start"></ion-checkbox>
           <ion-label>
-            <h1>Create idea</h1>
-            <ion-note>Run idea by Carlos Arellano</ion-note>
+            <h1>Mi PurLuft</h1>
+            <ion-note>dirección:</ion-note>
           </ion-label>
           <ion-badge color="succes" slot="end">
-            5 days
+            conectado
           </ion-badge>
         </ion-item>
       </ion-list>
@@ -45,7 +45,7 @@
         </ion-fab-button>
       </ion-fab>
 
-      <div id="container" v-if="auth.currentUser">
+      <div v-if="auth.currentUser" id="container">
         <strong>Bienvenido {{auth.currentUser.displayName}}</strong>
         <p>Recibirás <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">notificaciones de seguridad</a></p>
       </div>
@@ -75,7 +75,7 @@ export default defineComponent({
       megaphone,
       logOutOutline,
       auth,
-      signOut
+      signOut 
     }
   }
 });

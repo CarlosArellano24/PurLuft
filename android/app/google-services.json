@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "465692295067",
+    "firebase_url": "https://red-purificadores-default-rtdb.firebaseio.com",
+    "project_id": "red-purificadores",
+    "storage_bucket": "red-purificadores.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465692295067:android:4979966e2b7ed19306eb3e",
+        "android_client_info": {
+          "package_name": "web.redpurificadores.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465692295067-9lslk6ij9m84855gv4ghflia0jog9ekb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "web.redpurificadores.app",
+            "certificate_hash": "0d508b9fe237f3fcdd1b2792b0dcbc4b824502b3"
+          }
+        },
+        {
+          "client_id": "465692295067-hmrh3k11fdcu9sta37gvi69mrtmbal0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiDpWNtHVzv5o31l27vkUxhnxbwD1cnwo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465692295067-hmrh3k11fdcu9sta37gvi69mrtmbal0g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

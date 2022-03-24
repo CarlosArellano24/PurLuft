@@ -5,10 +5,8 @@ import {
     FacebookAuthProvider,
     signInWithRedirect, 
     signOut,
-    connectAuthEmulator
+    // connectAuthEmulator
 } from 'firebase/auth';
-
-// import { useRouter } from 'vue-router';
 
 const config = {
     apiKey: "AIzaSyB59QXwzGzzlc1DlIq4bn-8rGYNl-YEFIQ",
@@ -23,12 +21,14 @@ const config = {
 
 const app = initializeApp(config);
 const auth = getAuth(app);
-const googleAuthProvider = new GoogleAuthProvider();
-const facebookAuthProvider = new FacebookAuthProvider();
+const googleAuthProvider = new GoogleAuthProvider(auth);
+const facebookAuthProvider = new FacebookAuthProvider(auth);
 
+/*
 if (location.hostname === 'localhost') {
     connectAuthEmulator(auth, 'http://localhost:9099')
 }
+*/
 
 export { 
     auth, 
